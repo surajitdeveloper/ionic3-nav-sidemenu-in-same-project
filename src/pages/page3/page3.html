@@ -13,7 +13,72 @@
   </ion-navbar>
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content>
+<!-- banner slider -->
+    <ion-slides (ionSlideDidChange)="slideChanged('banner')">
+        <ion-slide>
+          <h1>Slide 1</h1>
+        </ion-slide>
+        <ion-slide>
+          <h1>Slide 2</h1>
+        </ion-slide>
+        <ion-slide>
+          <h1>Slide 3</h1>
+        </ion-slide>
+    </ion-slides>
+  <!-- popular slider -->
+  <ion-slides autoplay="5000" loop="true" (ionSlideDidChange)="slideChanged('popular')">
+      <ion-slide>
+        <h1>Slide 1</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 2</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 3</h1>
+      </ion-slide>
+    </ion-slides>
+  <!-- Service Row -->
+    <ion-row>
+      <ion-col>
+        1
+      </ion-col>
+      <ion-col>
+        2 
+      </ion-col>
+      <ion-col>
+        3 
+      </ion-col>
+      <ion-col>
+        4 
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        1
+      </ion-col>
+      <ion-col>
+        2 
+      </ion-col>
+      <ion-col>
+        3 
+      </ion-col>
+      <ion-col>
+        4 
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          1
+        </ion-col>
+        <ion-col>
+          2 
+        </ion-col>
+        <ion-col>
+          3 
+        </ion-col>
+        <ion-col>
+          4 
+        </ion-col>
+    </ion-row>
 </ion-content>

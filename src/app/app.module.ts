@@ -12,7 +12,7 @@ import { Page2Page } from "../pages/page2/page2";
 import { Page3Page } from "../pages/page3/page3";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { TabsComponent } from "../components/tabs/tabs";
 @NgModule({
   declarations: [
     MyApp,
@@ -22,7 +22,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     Page1Page,
     Page2Page,
-    Page3Page
+    Page3Page,
+    TabsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     Page1Page,
     Page2Page,
-    Page3Page
+    Page3Page,
+    TabsComponent
   ],
   providers: [
     StatusBar,

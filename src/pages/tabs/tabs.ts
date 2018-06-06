@@ -6,7 +6,6 @@ import { HomePage } from '../home/home';
 import { Page1Page } from '../page1/page1';
 import { Page2Page } from '../page2/page2';
 import { Page3Page } from '../page3/page3';
-
 @Component({
   templateUrl: 'tabs.html'
 })
@@ -20,20 +19,24 @@ export class TabsPage {
   tab4Root = Page1Page;
   tab5Root = Page2Page;
   tab6Root = Page3Page;
+
+  goto(test)
+  {
+    alert(test);
+  }
   
   constructor(private nav: NavController) {
-
     console.log("tabs page");
   }
   ionViewDidEnter() {
     // Now you can use the tabs reference
-    console.log("a = ", this.tabRef);
+    //console.log("a = ", this.tabRef);
+    this.tabRef.select(3);
  }
   getSelectedIndex()
   {
     //this.nav.parent.t.select(tab);
     //console.log("tab change");
-
-    this.tabRef.select(1);
+    //this.tabRef.select(1);
   }
 }
