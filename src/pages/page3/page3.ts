@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
 /**
  * Generated class for the Page3Page page.
@@ -24,8 +24,9 @@ export class Page3Page {
     console.log("Slides Changes, current slide is: "+currentIndex);
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private events: Events) {
     console.log("page3 page");
+    this.events.publish('page', 'page1');
   }
   
   ionViewDidLoad() {

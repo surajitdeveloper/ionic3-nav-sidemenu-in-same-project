@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 
 /**
  * Generated class for the Page2Page page.
@@ -15,8 +15,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Page2Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private events: Events) {
     console.log("page2 page");
+    this.events.publish('page', 'page1');
   }
 
   ionViewDidLoad() {
